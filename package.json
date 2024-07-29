@@ -1,0 +1,19 @@
+{
+  "name": "fileloader",
+  "private": true,
+  "version": "0.0.0",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.3.4"
+  },
+  "dependencies": {
+    "i": "^0.3.7",
+    "npm": "^10.8.2",
+    "web-ifc-viewer": "^1.0.218"
+  }
+}
