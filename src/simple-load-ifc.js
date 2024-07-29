@@ -15,14 +15,13 @@ import { Color } from "three";
   loader.innerHTML = "Загрузка модели...";
   document.body.append(loader);
 
-  await viewer.IFC.loader.ifcManager.useWebWorkers(true, "wasm/IFCWorker.js");
+  await viewer.IFC.loader.ifcManager.useWebWorkers(true, "wasm/IFCWorker.js"); 
 
   await viewer.IFC.loader.ifcManager.applyWebIfcConfig({
-    USE_FAST_BOOLS: true,
-    COORDINATE_TO_ORIGIN: true,
+    COORDINATE_TO_ORIGIN: true, // смещаем модель к началу координат (а то можно и не найти)
   });
 
-  await viewer.IFC.loadIfcUrl("/custom.ifc");
+  await viewer.IFC.loadIfcUrl("/house.ifc"); //
 
   loader.remove();
 
