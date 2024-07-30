@@ -17,10 +17,8 @@ import { IfcViewerAPI } from "web-ifc-viewer";
 
   const gltfFile = await viewer.GLTF.exportIfcFileAsGltf({
     ifcFileUrl: "/house.ifc",
-    getProperties: true,
+    getProperties: true, // важно получить св-ва модели
   });
-
-  console.log("gltfFile :>> ", gltfFile);
 
   loadFile(gltfFile.gltf.allCategories.allFloors.file, "house.gltf"); // скачиваем саму gltf модель
   loadFile(gltfFile.json[0], "house.json"); // скачиваем св-ва модели в формате json
